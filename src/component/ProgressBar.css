@@ -1,0 +1,32 @@
+.bar {
+  /* background-color: white; */
+  padding: 0 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 30px;
+  color: white;
+  width: 90%;
+}
+
+.bar p,
+span {
+  font-size: 12px;
+  width: 50px;
+  text-transform: capitalize;
+}
+
+.bar-wrap {
+  background-color: rgb(241, 150, 134);
+  width: 100px;
+  height: 8px;
+  position: relative;
+}
+
+.points {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 70%;
+  background-color: rgb(209, 77, 54);
+}

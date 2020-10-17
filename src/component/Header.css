@@ -1,0 +1,14 @@
+header {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  position: sticky;
+  background-color: #393e46;
+}
+
+header img {
+  width: 200px;
+  object-fit: contain;
+}
