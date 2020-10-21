@@ -48,7 +48,7 @@ footer button:hover {
 }
 
 .loadingContainer {
-  height: calc(100vh - 175px);
+  height: cal(100vh-175px);
   display: flex;
   justify-content: center;
   align-items: center;
