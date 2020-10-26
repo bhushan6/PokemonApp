@@ -3,6 +3,7 @@ import {useState, useEffect} from 'react'
 import './App.css';
 import Card from './component/Card'
 import Header from "./component/Header"
+import loadingImg from './images/pokeball.png'
 
 let pokemon = [];
 let inLim = 50;
@@ -96,8 +97,9 @@ function load() {
            pokeType={item.types[0].type.name}
            />
          ))}
+         
       </div>
-         {loading? (<div className="loader"></div>) : null}
+         {loading? (<div className="loader"><img src={loadingImg}/>Gotta Catch 'em All!</div>) : null}
     </div>
   );
 

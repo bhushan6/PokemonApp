@@ -18,12 +18,26 @@ body {
 .loader {
   margin: 10% auto;
   display: block;
-  width: 100px;
-  height: 100px;
-  border: 5px solid gold;
+  width: 200px;
+  /* height: ; */
+  object-fit: contain;
+  /* border: 5px solid gold; */
   border-radius: 50%;
   border-top: none;
-  animation: loading 2s ease infinite;
+  font-family: sans-serif;
+  font-weight: 700;
+  /* color: white; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader img {
+  width: 100px;
+  object-fit: contain;
+  animation: loading 0.75s ease infinite;
+  margin-bottom: 0.4rem;
 }
 
 @keyframes loading {
