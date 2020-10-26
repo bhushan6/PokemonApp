@@ -37,6 +37,8 @@ useEffect(() => {
     setLoading(false)
 }
 
+
+
 getData(inLim, inOff)
 
 window.addEventListener('scroll',throttle(callback, 500) )

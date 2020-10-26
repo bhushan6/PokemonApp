@@ -1,6 +1,5 @@
 import React from 'react'
 import "./Header.css"
-import Logo from "../images/Pokemon_logo.png";
 
 function Header() {
     return (
