@@ -1,19 +1,23 @@
 import React from 'react';
 import {useState, useEffect} from 'react'
 import './App.css';
-import Card from '../src/Components/Card'
-import Header from "../src/Components/Header"
+import Card from './component/Card'
+import Header from "./component/Header"
 
 let pokemon = [];
 let inLim = 50;
 let inOff = 0;
 
 
+
 function App() {
   const [data, setData] = useState([]);
   const [lim, setLim] = useState(inLim);
   const [off, setOff] = useState(inOff);
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(true);
+  
+
+
 
 
 useEffect(() => {
@@ -33,47 +37,56 @@ useEffect(() => {
     setLoading(false)
 }
 
-window.addEventListener('scroll', function () {
+getData(inLim, inOff)
 
+window.addEventListener('scroll',throttle(callback, 500) )
+
+function throttle(fn, wait) {
+  let time = Date.now();
+  return function() {
+    if ((time + wait - Date.now()) < 0) {
+      fn();
+      time = Date.now();
+    }
+  }
+}
+
+function callback() {
+
+  setLoading(true)
   let scrolling = window.innerHeight + window.scrollY;
   let scrollable = document.body.offsetHeight * 0.9;
 
   if (scrolling >= scrollable){
-    if(inLim === 50 && inOff === 0){
-      inLim = 10;
-    inOff += 50
-    setOff(inOff)
-    setLoading(true)
-    console.log(loading)
-    getData(inLim, inOff)
-    console.log(loading)
-    // console.log(inLim, inOff)
-    } else{
-      inLim = 10;
-      inOff+=10
-      // console.log(inLim, inOff)
-      setOff(inOff)
-      setLoading(true)
-      console.log(loading)
-      getData(inLim, inOff)
-      console.log(loading)
-    }
-  
+    load()
   }
-  
-})
+}
+
+function load() {
+  if(inLim === 50 && inOff === 0){
+    inLim = 10;
+  inOff += 50
+  setOff(inOff)
+  getData(inLim, inOff)
+  } else{
+    inLim = 10;
+    inOff+=10
+    setOff(inOff)
     getData(inLim, inOff)
+  }
+}
+    
   }, [lim])
 
 
 
   return (
-    <div className="container" >
-      
+    <div>
+      <div className="container" >
          <Header/>
          {data.map(item => (
            <Card 
-            key = {item.id}
+            
            name= {item.name} 
            imgUrl={item.sprites.other["official-artwork"].front_default} 
            rank={item.id} 
@@ -81,8 +94,12 @@ window.addEventListener('scroll', function () {
            pokeType={item.types[0].type.name}
            />
          ))}
+      </div>
+         {loading? (<div className="loader"></div>) : null}
     </div>
   );
+
+ 
 }
 
 export default App;
