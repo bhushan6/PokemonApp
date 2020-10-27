@@ -3,7 +3,8 @@ import {useState, useEffect} from 'react'
 import './App.css';
 import Card from './component/Card'
 import Header from "./component/Header"
-import loadingImg from './images/pokeball.png'
+// import loadingImg from './images/pokeball.png'
+import CardSkeleton from './component/CardSkeleton'
 
 let pokemon = [];
 let inLim = 50;
@@ -89,7 +90,6 @@ function load() {
          <Header/>
          {data.map(item => (
            <Card 
-            
            name= {item.name} 
            imgUrl={item.sprites.other["official-artwork"].front_default} 
            rank={item.id} 
@@ -99,7 +99,16 @@ function load() {
          ))}
          
       </div>
-         {loading? (<div className="loader"><img src={loadingImg}/>Gotta Catch 'em All!</div>) : null}
+         {loading? (<div className="loader">
+           <CardSkeleton/>
+           <CardSkeleton/>
+           <CardSkeleton/>
+           <CardSkeleton/>
+           <CardSkeleton/>
+           <CardSkeleton/>
+           <CardSkeleton/>
+           <CardSkeleton/>
+         </div>) : null}
     </div>
   );
 

@@ -2,13 +2,19 @@ header {
   width: 100vw;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   height: 100px;
   position: sticky;
   background-color: #393e46;
+  transition: all ease 1s;
 }
 
 header img {
   width: 200px;
   object-fit: contain;
+  margin-right: 2rem;
+}
+
+.show {
+  height: 100vw;
 }

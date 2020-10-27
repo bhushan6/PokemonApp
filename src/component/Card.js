@@ -1,6 +1,7 @@
 import React from 'react'
 import './Card.css'
 import ProgressBar from './ProgressBar'
+import Modal from './Modal'
 
 function Card({imgUrl, name, rank, stats, pokeType}) {
 
@@ -31,11 +32,15 @@ if(keys.includes(pokeType)) {
     color = bgColor[pokeType];
 }
 
+function clicked() {
+    
+}
+
 
     // console.log(bgColor.normal)
 
     return (
-        <div className="card-container">
+        <div className="card-container" onClick={clicked}>
             <div className="card">
                 <div className="front-card" style = {{backgroundColor : color}}>
                     <div className="img-container">

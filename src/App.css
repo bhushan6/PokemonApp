@@ -15,33 +15,40 @@ body {
   overflow-x: hidden;
 }
 
-.loader {
+/* .loader {
   margin: 10% auto;
-  display: block;
-  width: 200px;
-  /* height: ; */
-  object-fit: contain;
-  /* border: 5px solid gold; */
-  border-radius: 50%;
+  display: block; */
+/* width: 200px; */
+/* height: ; */
+/* object-fit: contain; */
+/* border: 5px solid gold; */
+/* border-radius: 50%;
   border-top: none;
   font-family: sans-serif;
-  font-weight: 700;
-  /* color: white; */
-  display: flex;
+  font-weight: 700; */
+/* color: white; */
+/* display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
+} */
 
-.loader img {
+/* .loader img {
   width: 100px;
   object-fit: contain;
   animation: loading 0.75s ease infinite;
   margin-bottom: 0.4rem;
-}
+} */
 
-@keyframes loading {
+/* @keyframes loading {
   100% {
     transform: rotate(360deg);
   }
+} */
+
+.loader {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
 }
