@@ -3,11 +3,11 @@ import './CardSkeleton.css'
 
 function CardSkeleton() {
     return (
-        <div class="card-skeleton">
-            <div class="img-skeleton"></div>
-            <div class="rank-skeleton"></div>
-            <div class="name-skeleton"></div>
-            <div class="type-skeleton"></div>
+        <div className="card-skeleton">
+            <div className="img-skeleton"></div>
+            <div className="rank-skeleton"></div>
+            <div className="name-skeleton"></div>
+            <div className="type-skeleton"></div>
         </div>
     )
 }

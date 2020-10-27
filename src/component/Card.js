@@ -33,7 +33,7 @@ if(keys.includes(pokeType)) {
 }
 
 function clicked() {
-    
+
 }
 
 
@@ -53,7 +53,10 @@ function clicked() {
                 <div className="back-card">
                     <div className="stats">
                         {stats.map(item => (
-                            <ProgressBar width = {item.base_stat} statName= {item.stat.name}/>
+                            <ProgressBar 
+                            key = {item.id}
+                            width = {item.base_stat} 
+                            statName= {item.stat.name}/>
                         ))}
                     </div>
                 </div>
