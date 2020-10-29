@@ -88,6 +88,7 @@ function load() {
          <Header/>
          {data.map(item => (
            <Card 
+           key={item.id}
            name= {item.name} 
            imgUrl={item.sprites.other["official-artwork"].front_default} 
            rank={item.id} 

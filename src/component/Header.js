@@ -26,7 +26,7 @@ function Header() {
                 {/* className={expanded? "show" : null} */}
                 {/* <div className="row-1"> */}
                     {/* <input type="text" name="" id="" placeholder="Search Pokemon"/> */}
-                    <img  src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/500px-International_Pok%C3%A9mon_logo.svg.png" alt=""/>
+                    {/* <img  src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/500px-International_Pok%C3%A9mon_logo.svg.png" alt=""/> */}
                     {/* <h4 onClick={expand}>Sort By Types</h4> */}
                 {/* </div> */}
                 {/* <div className="types">

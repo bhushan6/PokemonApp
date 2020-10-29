@@ -3,7 +3,7 @@ import './Card.css'
 import ProgressBar from './ProgressBar'
 
 
-function Card({imgUrl, name, rank, stats, pokeType}) {
+function Card({ imgUrl, name, rank, stats, pokeType}) {
 
     const bgColor = {
         normal: "#BDBDAF",
@@ -52,9 +52,9 @@ function clicked() {
                 </div>
                 <div className="back-card">
                     <div className="stats">
-                        {stats.map(item => (
+                        {stats.map((item, index) => (
                             <ProgressBar 
-                            key = {item.id}
+                            key={index}
                             width = {item.base_stat} 
                             statName= {item.stat.name}/>
                         ))}
