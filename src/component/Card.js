@@ -1,7 +1,7 @@
 import React from 'react'
 import './Card.css'
 import ProgressBar from './ProgressBar'
-import Modal from './Modal'
+
 
 function Card({imgUrl, name, rank, stats, pokeType}) {
 

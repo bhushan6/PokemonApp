@@ -43,7 +43,7 @@ useEffect(() => {
 
 getData(inLim, inOff)
 
-window.addEventListener('scroll',throttle(callback, 500) )
+window.addEventListener('scroll',throttle(callback, 1000) )
 
 function throttle(fn, wait) {
   let time = Date.now();
@@ -81,8 +81,6 @@ function load() {
 }
     
   }, [lim])
-
-
 
   return (
     <div>

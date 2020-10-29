@@ -1,20 +1,245 @@
 header {
   width: 100vw;
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+  /* flex-wrap: wrap;? */
+  align-items: center;
   height: 100px;
-  position: sticky;
+  /* position: sticky; */
   background-color: #393e46;
   transition: all ease 1s;
+  overflow: hidden;
+}
+
+.row-1 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.types {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.types h4 {
+  width: 88px;
+  margin: 1rem;
+  text-align: center;
+  text-transform: capitalize;
 }
 
 header img {
   width: 200px;
   object-fit: contain;
   margin-right: 2rem;
+  margin: 0.5rem auto;
 }
 
 .show {
-  height: 300px;
+  height: 325px;
+}
+
+@media screen and (max-width: 600px) {
+  header .row-1 {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .row-1 input,
+  img,
+  h4 {
+    margin: 0;
+  }
+}
+
+header h4 {
+  color: white;
+  font-size: 1.2rem;
+  font-family: sans-serif;
+  border: 2px solid gold;
+  padding: 0.5rem;
+  border-radius: 10px;
+  margin-right: 2rem;
+  transition: background 0.3s ease;
+}
+
+header h4:hover {
+  background-color: gold;
+  cursor: pointer;
+}
+
+header input {
+  margin-left: 2rem;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  border: none;
+  outline: none;
+  font-family: sans-serif;
+}
+
+/* .header-con {
+  height: 100px;
+  background-color: #393e46;
+  transition: all ease 1s;
+  overflow: hidden;
+} */
+/* 
+     
+        psychic: "#e493bf",
+        ice : "",
+        dragon: "",
+        dark : "#d8a992",
+        steel: "#a7a3d8",
+        fairy: "#ebacf0" */
+
+#normal {
+  border: 2px solid #bdbdaf;
+}
+
+#normal:hover {
+  background-color: #bdbdaf;
+}
+
+#grass {
+  border: 2px solid #7eb998;
+}
+
+#grass:hover {
+  background-color: #7eb998;
+}
+
+#fire {
+  border: 2px solid #f09990;
+}
+
+#fire:hover {
+  background-color: #f09990;
+}
+
+#water {
+  border: 2px solid #8ab7e2;
+}
+
+#water:hover {
+  background-color: #8ab7e2;
+}
+
+#fighting {
+  border: 2px solid #cc8c7f;
+}
+
+#fighting:hover {
+  background-color: #cc8c7f;
+}
+
+#flying {
+  border: 2px solid #78a1ff;
+}
+
+#flying:hover {
+  background-color: #78a1ff;
+}
+
+#poison {
+  border: 2px solid #d183c8;
+}
+
+#poison:hover {
+  background-color: #d183c8;
+}
+
+#ground {
+  border: 2px solid #f1db90;
+}
+
+#ground:hover {
+  background-color: #f1db90;
+}
+
+#rock {
+  border: 2px solid #e4d699;
+}
+
+#rock:hover {
+  background-color: #e4d699;
+}
+
+#bug {
+  border: 2px solid #d9e086;
+}
+
+#bug:hover {
+  background-color: #d9e086;
+}
+
+#ghost {
+  border: 2px solid #9995e4;
+}
+
+#ghost:hover {
+  background-color: #9995e4;
+}
+
+#electric {
+  border: 2px solid #f1e48e;
+}
+
+#electric:hover {
+  background-color: #f1e48e;
+}
+
+#psychic {
+  border: 2px solid #e493bf;
+}
+
+#psychic:hover {
+  background-color: #e493bf;
+}
+
+#ice {
+  border: 2px solid #a2dee7;
+}
+
+#ice:hover {
+  background-color: #a2dee7;
+}
+
+#dragon {
+  border: 2px solid #9c8fe5;
+}
+
+#dragon:hover {
+  background-color: #9c8fe5;
+}
+
+#dark {
+  border: 2px solid #d8a992;
+}
+
+#dark:hover {
+  background-color: #d8a992;
+}
+
+#steel {
+  border: 2px solid #a7a3d8;
+}
+
+#steel:hover {
+  background-color: #a7a3d8;
+}
+
+#fairy {
+  border: 2px solid #ebacf0;
+}
+
+#fairy:hover {
+  background-color: #ebacf0;
 }
